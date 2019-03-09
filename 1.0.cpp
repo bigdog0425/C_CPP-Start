@@ -1,9 +1,9 @@
 #include<iostream>//基本輸出入
-#include<cstdlib>//亂數取得
+#include<cstdlib>//常用函數庫(亂數取得)
 #include<ctime>//時間函數
 #include<fstream>//讀檔案
 #include<windows.h>//延時 
-void Ra_setting(void);//讀取基礎設定 
+void Ra_setting(void);//讀取基礎設定
 int not_likely(void);//亂數取得
 void List_one(void);//名單讀取1
 void List_two(char LA[][100]);//名單讀取2
