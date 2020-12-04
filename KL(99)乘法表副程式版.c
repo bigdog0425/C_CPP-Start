@@ -1,32 +1,36 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 
-int star(int x){
-int l;
-for(l=1;l<=x;l++){
-printf("*");
+using namespace std;
+
+int star(int n){
+for(int i=0;i<n;i++){
+cout << "*";
 }
+cout << "\n";
 }
-int main(int argc, char *argv[]) {
-int i,k,a,b,c,x;
-printf("依序輸入星星、被乘數、乘數");
-scanf("%d%d%d",&x,&b,&c);
-star(x);
-printf("\n");
-for(i=1;i<=b;i++){
-printf("\n");
-for(k=1;k<=c;k++){
-a=i*k;
-if(a>=10){
-printf("%dX%d=%d ",i,k,a);
+
+int main(int argc, char** argv) {
+int n,a,b;
+cout << "輸入星星:";
+cin >> n;
+cout << "輸入被乘數:";
+cin >> a;
+cout << "輸入乘數:";
+cin >> b;
+star(n);
+for(int i=1;i<=a;i++){
+for (int j=1;j<=b;j++){
+cout << i << "x" << j << "=" << i*j << " ";
+if (i*j<10){
+cout << "  ";
 }
-else{
-printf("%dX%d= %d ",i,k,a);
+if (i*j<100 && i*j >= 10){
+cout << " ";
 }
+
 }
+cout << "\n";
 }
-printf("\n");
-printf("\n");
-star(x);
+star(n);
 return 0;
 }
